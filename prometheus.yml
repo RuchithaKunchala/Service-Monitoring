@@ -37,7 +37,7 @@ scrape_configs:
     follow_redirects: true
 
     static_configs:
-    - targets: ['extractor-master-cc-reporting-sa-02.apps.colt-np.ocp.standardchartered.com']
+    - targets: ['extractor-master-cc-*-*.standardchartered.com']
       labels:
               group: 'sa-02'
               service: 'extractor'
@@ -51,7 +51,7 @@ scrape_configs:
     follow_redirects: true
 
     static_configs:
-    - targets: ['transformer-master-cc-reporting-sa-02.apps.colt-np.ocp.standardchartered.com']
+    - targets: ['transformer-master-cc-reporting-*-*.standardchartered.com']
       labels:
               group: 'sa-03'
               service: 'transformer'
@@ -65,7 +65,7 @@ scrape_configs:
     follow_redirects: true
 
     static_configs:
-    - targets: ['gb-svc-rpt-ext-mas-cc-reporting-sa-05.apps.colt-np2.ocp.standardchartered.com']
+    - targets: ['gb-svc-rpt-ext-mas-cc-reporting-*-*.standardchartered.com']
       labels:
               group: 'sa-05'
               service: 'extractor'
@@ -79,7 +79,7 @@ scrape_configs:
     follow_redirects: true
 
     static_configs:
-    - targets: ['gb-svc-rpt-tx-mas-cc-reporting-sa-05.apps.colt-np2.ocp.standardchartered.com']
+    - targets: ['gb-svc-rpt-tx-mas-cc-reporting-*-*.standardchartered.com']
       labels:
             group: 'sa-05'
             service: 'transformer'
@@ -92,7 +92,7 @@ scrape_configs:
     scheme: http
     follow_redirects: true
     static_configs:
-    - targets: ['gb-svc-rpt-tx-mas-cc-reporting-sa-05.apps.colt-np2.ocp.standardchartered.com']
+    - targets: ['gb-svc-rpt-tx-mas-cc-reporting-*-*.standardchartered.com']
       labels:
             group: 'sa-05'
 
