@@ -37,7 +37,7 @@ scrape_configs:
     follow_redirects: true
 
     static_configs:
-    - targets: ['extractor-master-cc-*-*.standardchartered.com']
+    - targets: ['extractor-master-cc-reporting-*-*.standardchartered.com']
       labels:
               group: 'sa-02'
               service: 'extractor'
