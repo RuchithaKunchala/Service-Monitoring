@@ -1,0 +1,3007 @@
+{
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": "-- Grafana --",
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "limit": 100,
+        "name": "Annotations & Alerts",
+        "showIn": 0,
+        "type": "dashboard"
+      }
+    ]
+  },
+  "editable": true,
+  "gnetId": null,
+  "graphTooltip": 0,
+  "id": 5,
+  "iteration": 1626368036894,
+  "links": [],
+  "panels": [
+    {
+      "collapsed": false,
+      "datasource": null,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 0
+      },
+      "id": 54,
+      "panels": [],
+      "title": "ENV: $group and Micro-service: $service",
+      "type": "row"
+    },
+    {
+      "collapsed": true,
+      "datasource": null,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 1
+      },
+      "id": 31,
+      "panels": [
+        {
+          "cacheTimeout": null,
+          "colorBackground": false,
+          "colorPrefix": false,
+          "colorValue": true,
+          "colors": [
+            "#299c46",
+            "rgba(237, 129, 40, 0.89)",
+            "#C4162A"
+          ],
+          "datasource": "Prometheus",
+          "decimals": 1,
+          "format": "s",
+          "gauge": {
+            "maxValue": 100,
+            "minValue": 0,
+            "show": false,
+            "thresholdLabels": false,
+            "thresholdMarkers": true
+          },
+          "gridPos": {
+            "h": 4,
+            "w": 4,
+            "x": 0,
+            "y": 2
+          },
+          "id": 33,
+          "interval": null,
+          "links": [],
+          "mappingType": 1,
+          "mappingTypes": [
+            {
+              "name": "value to text",
+              "value": 1
+            },
+            {
+              "name": "range to text",
+              "value": 2
+            }
+          ],
+          "maxDataPoints": 100,
+          "nullPointMode": "connected",
+          "nullText": null,
+          "options": {},
+          "pluginVersion": "6.6.0",
+          "postfix": "",
+          "postfixFontSize": "50%",
+          "prefix": "",
+          "prefixFontSize": "70%",
+          "rangeMaps": [
+            {
+              "from": "null",
+              "text": "N/A",
+              "to": "null"
+            }
+          ],
+          "repeat": null,
+          "repeatDirection": "v",
+          "scopedVars": {
+            "job": {
+              "selected": true,
+              "text": "sa05-gb-svc-rpt-extract-mas",
+              "value": "sa05-gb-svc-rpt-extract-mas"
+            }
+          },
+          "sparkline": {
+            "fillColor": "rgba(31, 118, 189, 0.18)",
+            "full": true,
+            "lineColor": "rgb(31, 120, 193)",
+            "show": false,
+            "ymax": null,
+            "ymin": null
+          },
+          "tableColumn": "",
+          "targets": [
+            {
+              "expr": "process_uptime_seconds{group=\"$group\",job=\"$job\", service=\"$service\"}",
+              "refId": "A"
+            }
+          ],
+          "thresholds": "",
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Up Time  ",
+          "type": "singlestat",
+          "valueFontSize": "70%",
+          "valueMaps": [
+            {
+              "op": "=",
+              "text": "N/A",
+              "value": "null"
+            }
+          ],
+          "valueName": "current"
+        },
+        {
+          "cacheTimeout": null,
+          "colorBackground": false,
+          "colorPrefix": false,
+          "colorValue": true,
+          "colors": [
+            "#299c46",
+            "rgba(237, 129, 40, 0.89)",
+            "#C4162A"
+          ],
+          "datasource": "Prometheus",
+          "decimals": null,
+          "format": "dateTimeAsUS",
+          "gauge": {
+            "maxValue": 100,
+            "minValue": 0,
+            "show": false,
+            "thresholdLabels": false,
+            "thresholdMarkers": true
+          },
+          "gridPos": {
+            "h": 4,
+            "w": 4,
+            "x": 4,
+            "y": 2
+          },
+          "id": 34,
+          "interval": null,
+          "links": [],
+          "mappingType": 1,
+          "mappingTypes": [
+            {
+              "name": "value to text",
+              "value": 1
+            },
+            {
+              "name": "range to text",
+              "value": 2
+            }
+          ],
+          "maxDataPoints": 100,
+          "nullPointMode": "connected",
+          "nullText": null,
+          "options": {},
+          "pluginVersion": "6.6.0",
+          "postfix": "",
+          "postfixFontSize": "50%",
+          "prefix": "",
+          "prefixFontSize": "70%",
+          "rangeMaps": [
+            {
+              "from": "null",
+              "text": "N/A",
+              "to": "null"
+            }
+          ],
+          "repeat": null,
+          "repeatDirection": "v",
+          "scopedVars": {
+            "job": {
+              "selected": true,
+              "text": "sa05-gb-svc-rpt-extract-mas",
+              "value": "sa05-gb-svc-rpt-extract-mas"
+            }
+          },
+          "sparkline": {
+            "fillColor": "rgba(31, 118, 189, 0.18)",
+            "full": true,
+            "lineColor": "rgb(31, 120, 193)",
+            "show": false,
+            "ymax": null,
+            "ymin": null
+          },
+          "tableColumn": "",
+          "targets": [
+            {
+              "expr": "process_start_time_seconds{group=\"$group\", job=\"$job\", service=\"$service\"}*1000",
+              "refId": "A"
+            }
+          ],
+          "thresholds": "",
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Start Time ",
+          "type": "singlestat",
+          "valueFontSize": "70%",
+          "valueMaps": [
+            {
+              "op": "=",
+              "text": "N/A",
+              "value": "null"
+            }
+          ],
+          "valueName": "current"
+        },
+        {
+          "cacheTimeout": null,
+          "datasource": "Prometheus",
+          "gridPos": {
+            "h": 7,
+            "w": 16,
+            "x": 8,
+            "y": 2
+          },
+          "id": 66,
+          "links": [],
+          "options": {
+            "displayMode": "lcd",
+            "fieldOptions": {
+              "calcs": [
+                "last"
+              ],
+              "defaults": {
+                "mappings": [
+                  {
+                    "id": 0,
+                    "op": "=",
+                    "text": "N/A",
+                    "type": 1,
+                    "value": "null"
+                  }
+                ],
+                "max": 100,
+                "min": 0,
+                "nullValueMode": "connected",
+                "thresholds": {
+                  "mode": "absolute",
+                  "steps": [
+                    {
+                      "color": "green",
+                      "value": null
+                    },
+                    {
+                      "color": "semi-dark-red",
+                      "value": 80
+                    }
+                  ]
+                },
+                "unit": "none"
+              },
+              "overrides": [],
+              "values": false
+            },
+            "orientation": "horizontal",
+            "showUnfilled": true
+          },
+          "pluginVersion": "6.6.0",
+          "scopedVars": {
+            "job": {
+              "selected": true,
+              "text": "sa05-gb-svc-rpt-extract-mas",
+              "value": "sa05-gb-svc-rpt-extract-mas"
+            }
+          },
+          "targets": [
+            {
+              "expr": "jvm_classes_loaded_classes{group=\"$group\", job=\"$job\", service=\"$service\"}\r",
+              "instant": false,
+              "refId": "A"
+            }
+          ],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Classes loaded",
+          "type": "bargauge"
+        },
+        {
+          "cacheTimeout": null,
+          "datasource": "Prometheus",
+          "gridPos": {
+            "h": 10,
+            "w": 4,
+            "x": 0,
+            "y": 6
+          },
+          "id": 36,
+          "links": [],
+          "options": {
+            "fieldOptions": {
+              "calcs": [
+                "mean"
+              ],
+              "defaults": {
+                "decimals": 2,
+                "mappings": [
+                  {
+                    "id": 0,
+                    "op": "=",
+                    "text": "N/A",
+                    "type": 1,
+                    "value": "null"
+                  }
+                ],
+                "max": 100,
+                "min": 0,
+                "nullValueMode": "connected",
+                "thresholds": {
+                  "mode": "absolute",
+                  "steps": [
+                    {
+                      "color": "#299c46",
+                      "value": null
+                    },
+                    {
+                      "color": "rgba(237, 129, 40, 0.89)",
+                      "value": 70
+                    },
+                    {
+                      "color": "#d44a3a",
+                      "value": 90
+                    }
+                  ]
+                },
+                "unit": "percent"
+              },
+              "overrides": [],
+              "values": false
+            },
+            "orientation": "horizontal",
+            "showThresholdLabels": false,
+            "showThresholdMarkers": true
+          },
+          "pluginVersion": "6.6.0",
+          "repeat": null,
+          "repeatDirection": "v",
+          "scopedVars": {
+            "job": {
+              "selected": true,
+              "text": "sa05-gb-svc-rpt-extract-mas",
+              "value": "sa05-gb-svc-rpt-extract-mas"
+            }
+          },
+          "targets": [
+            {
+              "expr": "sum(jvm_memory_used_bytes{group=\"$group\", job=\"$job\", area=\"heap\", service=\"$service\"})*100/sum(jvm_memory_max_bytes{group=\"$group\", job=\"$job\", area=\"heap\", service=\"$service\"})",
+              "refId": "A"
+            }
+          ],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Average Heap Used  ",
+          "type": "gauge"
+        },
+        {
+          "cacheTimeout": null,
+          "datasource": "Prometheus",
+          "gridPos": {
+            "h": 10,
+            "w": 4,
+            "x": 4,
+            "y": 6
+          },
+          "id": 64,
+          "links": [],
+          "options": {
+            "fieldOptions": {
+              "calcs": [
+                "mean"
+              ],
+              "defaults": {
+                "decimals": 2,
+                "mappings": [
+                  {
+                    "id": 0,
+                    "op": "=",
+                    "text": "N/A",
+                    "type": 1,
+                    "value": "null"
+                  }
+                ],
+                "max": 100,
+                "min": 0,
+                "nullValueMode": "connected",
+                "thresholds": {
+                  "mode": "absolute",
+                  "steps": [
+                    {
+                      "color": "#299c46",
+                      "value": null
+                    },
+                    {
+                      "color": "rgba(237, 129, 40, 0.89)",
+                      "value": 70
+                    },
+                    {
+                      "color": "#d44a3a",
+                      "value": 90
+                    }
+                  ]
+                },
+                "unit": "percent"
+              },
+              "overrides": [],
+              "values": false
+            },
+            "orientation": "horizontal",
+            "showThresholdLabels": false,
+            "showThresholdMarkers": true
+          },
+          "pluginVersion": "6.6.0",
+          "repeatDirection": "v",
+          "scopedVars": {
+            "job": {
+              "selected": true,
+              "text": "sa05-gb-svc-rpt-extract-mas",
+              "value": "sa05-gb-svc-rpt-extract-mas"
+            }
+          },
+          "targets": [
+            {
+              "expr": "sum(jvm_memory_used_bytes{group=\"$group\", job=\"$job\", area=\"nonheap\", service=\"$service\"})*100/sum(jvm_memory_max_bytes{group=\"$group\", job=\"$job\", area=\"nonheap\", service=\"$service\"})",
+              "refId": "A"
+            }
+          ],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Average Nonheap Used  ",
+          "type": "gauge"
+        },
+        {
+          "cacheTimeout": null,
+          "datasource": "Prometheus",
+          "gridPos": {
+            "h": 7,
+            "w": 16,
+            "x": 8,
+            "y": 9
+          },
+          "id": 67,
+          "links": [],
+          "options": {
+            "displayMode": "lcd",
+            "fieldOptions": {
+              "calcs": [
+                "lastNotNull"
+              ],
+              "defaults": {
+                "mappings": [
+                  {
+                    "id": 0,
+                    "op": "=",
+                    "text": "N/A",
+                    "type": 1,
+                    "value": "null"
+                  }
+                ],
+                "max": 100,
+                "min": 0,
+                "nullValueMode": "connected",
+                "thresholds": {
+                  "mode": "absolute",
+                  "steps": [
+                    {
+                      "color": "green",
+                      "value": null
+                    },
+                    {
+                      "color": "red",
+                      "value": 80
+                    }
+                  ]
+                },
+                "unit": "none"
+              },
+              "overrides": [],
+              "values": false
+            },
+            "orientation": "horizontal",
+            "showUnfilled": true
+          },
+          "pluginVersion": "6.6.0",
+          "scopedVars": {
+            "job": {
+              "selected": true,
+              "text": "sa05-gb-svc-rpt-extract-mas",
+              "value": "sa05-gb-svc-rpt-extract-mas"
+            }
+          },
+          "targets": [
+            {
+              "expr": "jvm_classes_unloaded_classes_total{group=\"$group\", job=\"$job\", service=\"$service\"}\r",
+              "refId": "A"
+            }
+          ],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Classes Unloaded",
+          "type": "bargauge"
+        },
+        {
+          "aliasColors": {},
+          "bars": false,
+          "cacheTimeout": null,
+          "dashLength": 10,
+          "dashes": false,
+          "datasource": "Prometheus",
+          "fill": 3,
+          "fillGradient": 0,
+          "gridPos": {
+            "h": 13,
+            "w": 14,
+            "x": 0,
+            "y": 16
+          },
+          "hiddenSeries": false,
+          "id": 21,
+          "legend": {
+            "alignAsTable": true,
+            "avg": true,
+            "current": false,
+            "hideEmpty": false,
+            "max": true,
+            "min": false,
+            "rightSide": true,
+            "show": true,
+            "total": false,
+            "values": true
+          },
+          "lines": true,
+          "linewidth": 2,
+          "links": [],
+          "nullPointMode": "null",
+          "options": {
+            "dataLinks": []
+          },
+          "percentage": false,
+          "pluginVersion": "6.6.0",
+          "pointradius": 0.5,
+          "points": false,
+          "renderer": "flot",
+          "repeat": null,
+          "repeatDirection": "v",
+          "scopedVars": {
+            "job": {
+              "selected": true,
+              "text": "sa05-gb-svc-rpt-extract-mas",
+              "value": "sa05-gb-svc-rpt-extract-mas"
+            }
+          },
+          "seriesOverrides": [
+            {
+              "alias": "Process CPU Usage",
+              "color": "#37872D",
+              "linewidth": 3
+            }
+          ],
+          "spaceLength": 10,
+          "stack": true,
+          "steppedLine": false,
+          "targets": [
+            {
+              "expr": "process_cpu_usage{group=\"$group\", job=\"$job\", service=\"$service\"}\r",
+              "instant": false,
+              "legendFormat": "Process CPU Usage",
+              "refId": "A"
+            },
+            {
+              "expr": "system_cpu_usage{group=\"$group\", job=\"$job\", service=\"$service\"}\r",
+              "instant": false,
+              "legendFormat": "System CPU Usage",
+              "refId": "B"
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeRegions": [],
+          "timeShift": null,
+          "title": "CPU Usage",
+          "tooltip": {
+            "shared": true,
+            "sort": 0,
+            "value_type": "individual"
+          },
+          "type": "graph",
+          "xaxis": {
+            "buckets": null,
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "format": "percentunit",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": "0",
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ],
+          "yaxis": {
+            "align": false,
+            "alignLevel": null
+          }
+        },
+        {
+          "aliasColors": {},
+          "bars": false,
+          "dashLength": 10,
+          "dashes": false,
+          "datasource": null,
+          "fill": 0,
+          "fillGradient": 0,
+          "gridPos": {
+            "h": 13,
+            "w": 10,
+            "x": 14,
+            "y": 16
+          },
+          "hiddenSeries": false,
+          "id": 75,
+          "legend": {
+            "avg": false,
+            "current": false,
+            "max": false,
+            "min": false,
+            "show": false,
+            "total": false,
+            "values": false
+          },
+          "lines": true,
+          "linewidth": 1,
+          "nullPointMode": "null",
+          "options": {
+            "dataLinks": []
+          },
+          "percentage": false,
+          "pointradius": 2,
+          "points": false,
+          "renderer": "flot",
+          "scopedVars": {
+            "job": {
+              "selected": true,
+              "text": "sa05-gb-svc-rpt-extract-mas",
+              "value": "sa05-gb-svc-rpt-extract-mas"
+            }
+          },
+          "seriesOverrides": [
+            {
+              "alias": "System Load Avg",
+              "color": "#8AB8FF",
+              "fill": 3
+            },
+            {
+              "alias": "slv2",
+              "color": "#1F60C4"
+            }
+          ],
+          "spaceLength": 10,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "expr": "system_load_average_1m{group=\"$group\", job=\"$job\", service=\"$service\"}\r",
+              "legendFormat": "System Load Avg",
+              "refId": "A"
+            },
+            {
+              "expr": "system_load_average_1m{group=\"$group\", job=\"$job\", service=\"$service\"}\r",
+              "legendFormat": "slv2",
+              "refId": "B"
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeRegions": [],
+          "timeShift": null,
+          "title": "System Load Average",
+          "tooltip": {
+            "shared": true,
+            "sort": 0,
+            "value_type": "individual"
+          },
+          "type": "graph",
+          "xaxis": {
+            "buckets": null,
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ],
+          "yaxis": {
+            "align": false,
+            "alignLevel": null
+          }
+        }
+      ],
+      "repeat": "job",
+      "scopedVars": {
+        "job": {
+          "selected": true,
+          "text": "sa05-gb-svc-rpt-extract-mas",
+          "value": "sa05-gb-svc-rpt-extract-mas"
+        }
+      },
+      "title": "BASIC STATISTICS",
+      "type": "row"
+    },
+    {
+      "collapsed": true,
+      "datasource": null,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 3
+      },
+      "id": 46,
+      "panels": [
+        {
+          "cacheTimeout": null,
+          "colorBackground": false,
+          "colorPrefix": false,
+          "colorValue": true,
+          "colors": [
+            "#299c46",
+            "rgba(237, 129, 40, 0.89)",
+            "#C4162A"
+          ],
+          "datasource": "Prometheus",
+          "decimals": 1,
+          "format": "s",
+          "gauge": {
+            "maxValue": 100,
+            "minValue": 0,
+            "show": false,
+            "thresholdLabels": false,
+            "thresholdMarkers": true
+          },
+          "gridPos": {
+            "h": 4,
+            "w": 4,
+            "x": 0,
+            "y": 3
+          },
+          "id": 60,
+          "interval": null,
+          "links": [],
+          "mappingType": 1,
+          "mappingTypes": [
+            {
+              "name": "value to text",
+              "value": 1
+            },
+            {
+              "name": "range to text",
+              "value": 2
+            }
+          ],
+          "maxDataPoints": 100,
+          "nullPointMode": "connected",
+          "nullText": null,
+          "options": {},
+          "pluginVersion": "6.6.0",
+          "postfix": "",
+          "postfixFontSize": "50%",
+          "prefix": "",
+          "prefixFontSize": "70%",
+          "rangeMaps": [
+            {
+              "from": "null",
+              "text": "N/A",
+              "to": "null"
+            }
+          ],
+          "repeatDirection": "v",
+          "scopedVars": {
+            "job": {
+              "selected": true,
+              "text": "sa05-gb-svc-rpt-extract-mas",
+              "value": "sa05-gb-svc-rpt-extract-mas"
+            }
+          },
+          "sparkline": {
+            "fillColor": "rgba(31, 118, 189, 0.18)",
+            "full": true,
+            "lineColor": "rgb(31, 120, 193)",
+            "show": false,
+            "ymax": null,
+            "ymin": null
+          },
+          "tableColumn": "",
+          "targets": [
+            {
+              "expr": "hikaricp_connections_creation_seconds_max{group=\"$group\",job=\"$job\", service=\"$service\"}",
+              "refId": "A"
+            }
+          ],
+          "thresholds": "",
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Connection creation time",
+          "type": "singlestat",
+          "valueFontSize": "70%",
+          "valueMaps": [
+            {
+              "op": "=",
+              "text": "N/A",
+              "value": "null"
+            }
+          ],
+          "valueName": "current"
+        },
+        {
+          "aliasColors": {},
+          "bars": false,
+          "dashLength": 10,
+          "dashes": false,
+          "datasource": null,
+          "fill": 2,
+          "fillGradient": 4,
+          "gridPos": {
+            "h": 12,
+            "w": 16,
+            "x": 4,
+            "y": 3
+          },
+          "hiddenSeries": false,
+          "id": 48,
+          "legend": {
+            "alignAsTable": true,
+            "avg": false,
+            "current": true,
+            "max": true,
+            "min": false,
+            "rightSide": true,
+            "show": true,
+            "total": false,
+            "values": true
+          },
+          "lines": true,
+          "linewidth": 2,
+          "nullPointMode": "null",
+          "options": {
+            "dataLinks": []
+          },
+          "percentage": false,
+          "pointradius": 2,
+          "points": false,
+          "renderer": "flot",
+          "scopedVars": {
+            "job": {
+              "selected": true,
+              "text": "sa05-gb-svc-rpt-extract-mas",
+              "value": "sa05-gb-svc-rpt-extract-mas"
+            }
+          },
+          "seriesOverrides": [
+            {
+              "alias": "idle connections",
+              "color": "#8F3BB8"
+            },
+            {
+              "alias": "pending threads",
+              "color": "#FA6400"
+            }
+          ],
+          "spaceLength": 10,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "expr": "hikaricp_connections_active{group=\"$group\", job=\"$job\", service=\"$service\"}\r",
+              "legendFormat": "active connections",
+              "refId": "A"
+            },
+            {
+              "expr": "hikaricp_connections_idle{group=\"$group\", job=\"$job\", service=\"$service\"}\r",
+              "legendFormat": "idle connections",
+              "refId": "B"
+            },
+            {
+              "expr": "hikaricp_connections_pending{group=\"$group\", job=\"$job\", service=\"$service\"}\r",
+              "legendFormat": "pending threads",
+              "refId": "C"
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeRegions": [],
+          "timeShift": null,
+          "title": "Connections",
+          "tooltip": {
+            "shared": true,
+            "sort": 0,
+            "value_type": "individual"
+          },
+          "type": "graph",
+          "xaxis": {
+            "buckets": null,
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ],
+          "yaxis": {
+            "align": false,
+            "alignLevel": null
+          }
+        },
+        {
+          "cacheTimeout": null,
+          "colorBackground": false,
+          "colorPrefix": false,
+          "colorValue": false,
+          "colors": [
+            "#299c46",
+            "rgba(237, 129, 40, 0.89)",
+            "#d44a3a"
+          ],
+          "datasource": null,
+          "format": "none",
+          "gauge": {
+            "maxValue": 100,
+            "minValue": 0,
+            "show": false,
+            "thresholdLabels": false,
+            "thresholdMarkers": true
+          },
+          "gridPos": {
+            "h": 4,
+            "w": 4,
+            "x": 20,
+            "y": 3
+          },
+          "id": 50,
+          "interval": null,
+          "links": [],
+          "mappingType": 1,
+          "mappingTypes": [
+            {
+              "name": "value to text",
+              "value": 1
+            },
+            {
+              "name": "range to text",
+              "value": 2
+            }
+          ],
+          "maxDataPoints": 100,
+          "nullPointMode": "connected",
+          "nullText": null,
+          "options": {},
+          "pluginVersion": "6.6.0",
+          "postfix": "",
+          "postfixFontSize": "50%",
+          "prefix": "",
+          "prefixFontSize": "50%",
+          "rangeMaps": [
+            {
+              "from": "null",
+              "text": "N/A",
+              "to": "null"
+            }
+          ],
+          "scopedVars": {
+            "job": {
+              "selected": true,
+              "text": "sa05-gb-svc-rpt-extract-mas",
+              "value": "sa05-gb-svc-rpt-extract-mas"
+            }
+          },
+          "sparkline": {
+            "fillColor": "rgba(31, 118, 189, 0.18)",
+            "full": false,
+            "lineColor": "rgb(31, 120, 193)",
+            "show": false,
+            "ymax": null,
+            "ymin": null
+          },
+          "tableColumn": "",
+          "targets": [
+            {
+              "expr": "hikaricp_connections_max{group=\"$group\", job=\"$job\", service=\"$service\"}\r",
+              "legendFormat": "max",
+              "refId": "A"
+            }
+          ],
+          "thresholds": "",
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Max Connections",
+          "type": "singlestat",
+          "valueFontSize": "70%",
+          "valueMaps": [
+            {
+              "op": "=",
+              "text": "N/A",
+              "value": "null"
+            }
+          ],
+          "valueName": "avg"
+        },
+        {
+          "cacheTimeout": null,
+          "colorBackground": false,
+          "colorPrefix": false,
+          "colorValue": true,
+          "colors": [
+            "#299c46",
+            "rgba(237, 129, 40, 0.89)",
+            "#C4162A"
+          ],
+          "datasource": "Prometheus",
+          "decimals": 1,
+          "format": "s",
+          "gauge": {
+            "maxValue": 100,
+            "minValue": 0,
+            "show": false,
+            "thresholdLabels": false,
+            "thresholdMarkers": true
+          },
+          "gridPos": {
+            "h": 4,
+            "w": 4,
+            "x": 0,
+            "y": 7
+          },
+          "id": 58,
+          "interval": null,
+          "links": [],
+          "mappingType": 1,
+          "mappingTypes": [
+            {
+              "name": "value to text",
+              "value": 1
+            },
+            {
+              "name": "range to text",
+              "value": 2
+            }
+          ],
+          "maxDataPoints": 100,
+          "nullPointMode": "connected",
+          "nullText": null,
+          "options": {},
+          "pluginVersion": "6.6.0",
+          "postfix": "",
+          "postfixFontSize": "50%",
+          "prefix": "",
+          "prefixFontSize": "70%",
+          "rangeMaps": [
+            {
+              "from": "null",
+              "text": "N/A",
+              "to": "null"
+            }
+          ],
+          "repeatDirection": "v",
+          "scopedVars": {
+            "job": {
+              "selected": true,
+              "text": "sa05-gb-svc-rpt-extract-mas",
+              "value": "sa05-gb-svc-rpt-extract-mas"
+            }
+          },
+          "sparkline": {
+            "fillColor": "rgba(31, 118, 189, 0.18)",
+            "full": true,
+            "lineColor": "rgb(31, 120, 193)",
+            "show": false,
+            "ymax": null,
+            "ymin": null
+          },
+          "tableColumn": "",
+          "targets": [
+            {
+              "expr": "hikaricp_connections_acquire_seconds_max{group=\"$group\",job=\"$job\", service=\"$service\"}",
+              "refId": "A"
+            }
+          ],
+          "thresholds": "",
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Connection acquire time",
+          "type": "singlestat",
+          "valueFontSize": "70%",
+          "valueMaps": [
+            {
+              "op": "=",
+              "text": "N/A",
+              "value": "null"
+            }
+          ],
+          "valueName": "current"
+        },
+        {
+          "cacheTimeout": null,
+          "colorBackground": false,
+          "colorPrefix": false,
+          "colorValue": false,
+          "colors": [
+            "#299c46",
+            "rgba(237, 129, 40, 0.89)",
+            "#d44a3a"
+          ],
+          "datasource": null,
+          "format": "none",
+          "gauge": {
+            "maxValue": 100,
+            "minValue": 0,
+            "show": false,
+            "thresholdLabels": false,
+            "thresholdMarkers": true
+          },
+          "gridPos": {
+            "h": 4,
+            "w": 4,
+            "x": 20,
+            "y": 7
+          },
+          "id": 51,
+          "interval": null,
+          "links": [],
+          "mappingType": 1,
+          "mappingTypes": [
+            {
+              "name": "value to text",
+              "value": 1
+            },
+            {
+              "name": "range to text",
+              "value": 2
+            }
+          ],
+          "maxDataPoints": 100,
+          "nullPointMode": "connected",
+          "nullText": null,
+          "options": {},
+          "pluginVersion": "6.6.0",
+          "postfix": "",
+          "postfixFontSize": "50%",
+          "prefix": "",
+          "prefixFontSize": "50%",
+          "rangeMaps": [
+            {
+              "from": "null",
+              "text": "N/A",
+              "to": "null"
+            }
+          ],
+          "scopedVars": {
+            "job": {
+              "selected": true,
+              "text": "sa05-gb-svc-rpt-extract-mas",
+              "value": "sa05-gb-svc-rpt-extract-mas"
+            }
+          },
+          "sparkline": {
+            "fillColor": "rgba(31, 118, 189, 0.18)",
+            "full": false,
+            "lineColor": "rgb(31, 120, 193)",
+            "show": false,
+            "ymax": null,
+            "ymin": null
+          },
+          "tableColumn": "",
+          "targets": [
+            {
+              "expr": "hikaricp_connections_min{group=\"$group\", job=\"$job\", service=\"$service\"}\r",
+              "legendFormat": "min",
+              "refId": "A"
+            }
+          ],
+          "thresholds": "",
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Min Connections",
+          "type": "singlestat",
+          "valueFontSize": "70%",
+          "valueMaps": [
+            {
+              "op": "=",
+              "text": "N/A",
+              "value": "null"
+            }
+          ],
+          "valueName": "avg"
+        },
+        {
+          "cacheTimeout": null,
+          "colorBackground": false,
+          "colorPrefix": false,
+          "colorValue": true,
+          "colors": [
+            "#299c46",
+            "rgba(237, 129, 40, 0.89)",
+            "#C4162A"
+          ],
+          "datasource": "Prometheus",
+          "decimals": 1,
+          "format": "s",
+          "gauge": {
+            "maxValue": 100,
+            "minValue": 0,
+            "show": false,
+            "thresholdLabels": false,
+            "thresholdMarkers": true
+          },
+          "gridPos": {
+            "h": 4,
+            "w": 4,
+            "x": 0,
+            "y": 11
+          },
+          "id": 59,
+          "interval": null,
+          "links": [],
+          "mappingType": 1,
+          "mappingTypes": [
+            {
+              "name": "value to text",
+              "value": 1
+            },
+            {
+              "name": "range to text",
+              "value": 2
+            }
+          ],
+          "maxDataPoints": 100,
+          "nullPointMode": "connected",
+          "nullText": null,
+          "options": {},
+          "pluginVersion": "6.6.0",
+          "postfix": "",
+          "postfixFontSize": "50%",
+          "prefix": "",
+          "prefixFontSize": "70%",
+          "rangeMaps": [
+            {
+              "from": "null",
+              "text": "N/A",
+              "to": "null"
+            }
+          ],
+          "repeatDirection": "v",
+          "scopedVars": {
+            "job": {
+              "selected": true,
+              "text": "sa05-gb-svc-rpt-extract-mas",
+              "value": "sa05-gb-svc-rpt-extract-mas"
+            }
+          },
+          "sparkline": {
+            "fillColor": "rgba(31, 118, 189, 0.18)",
+            "full": true,
+            "lineColor": "rgb(31, 120, 193)",
+            "show": false,
+            "ymax": null,
+            "ymin": null
+          },
+          "tableColumn": "",
+          "targets": [
+            {
+              "expr": "hikaricp_connections_usage_seconds_max{group=\"$group\",job=\"$job\", service=\"$service\"}",
+              "refId": "A"
+            }
+          ],
+          "thresholds": "",
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Connection usage time",
+          "type": "singlestat",
+          "valueFontSize": "70%",
+          "valueMaps": [
+            {
+              "op": "=",
+              "text": "N/A",
+              "value": "null"
+            }
+          ],
+          "valueName": "current"
+        },
+        {
+          "cacheTimeout": null,
+          "colorBackground": false,
+          "colorPrefix": false,
+          "colorValue": false,
+          "colors": [
+            "#299c46",
+            "rgba(237, 129, 40, 0.89)",
+            "#d44a3a"
+          ],
+          "datasource": null,
+          "format": "none",
+          "gauge": {
+            "maxValue": 100,
+            "minValue": 0,
+            "show": false,
+            "thresholdLabels": false,
+            "thresholdMarkers": true
+          },
+          "gridPos": {
+            "h": 4,
+            "w": 4,
+            "x": 20,
+            "y": 11
+          },
+          "id": 52,
+          "interval": null,
+          "links": [],
+          "mappingType": 1,
+          "mappingTypes": [
+            {
+              "name": "value to text",
+              "value": 1
+            },
+            {
+              "name": "range to text",
+              "value": 2
+            }
+          ],
+          "maxDataPoints": 100,
+          "nullPointMode": "connected",
+          "nullText": null,
+          "options": {},
+          "pluginVersion": "6.6.0",
+          "postfix": "",
+          "postfixFontSize": "50%",
+          "prefix": "",
+          "prefixFontSize": "50%",
+          "rangeMaps": [
+            {
+              "from": "null",
+              "text": "N/A",
+              "to": "null"
+            }
+          ],
+          "scopedVars": {
+            "job": {
+              "selected": true,
+              "text": "sa05-gb-svc-rpt-extract-mas",
+              "value": "sa05-gb-svc-rpt-extract-mas"
+            }
+          },
+          "sparkline": {
+            "fillColor": "rgba(31, 118, 189, 0.18)",
+            "full": false,
+            "lineColor": "rgb(31, 120, 193)",
+            "show": false,
+            "ymax": null,
+            "ymin": null
+          },
+          "tableColumn": "",
+          "targets": [
+            {
+              "expr": "hikaricp_connections_timeout_total{group=\"$group\", job=\"$job\", service=\"$service\"}",
+              "legendFormat": "",
+              "refId": "A"
+            }
+          ],
+          "thresholds": "",
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Total Timeout Connections",
+          "type": "singlestat",
+          "valueFontSize": "70%",
+          "valueMaps": [
+            {
+              "op": "=",
+              "text": "N/A",
+              "value": "null"
+            }
+          ],
+          "valueName": "avg"
+        }
+      ],
+      "repeat": "job",
+      "scopedVars": {
+        "job": {
+          "selected": true,
+          "text": "sa05-gb-svc-rpt-extract-mas",
+          "value": "sa05-gb-svc-rpt-extract-mas"
+        }
+      },
+      "title": "Hikari CONNECTION POOL",
+      "type": "row"
+    },
+    {
+      "collapsed": true,
+      "datasource": null,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 7
+      },
+      "id": 29,
+      "panels": [
+        {
+          "aliasColors": {},
+          "bars": false,
+          "cacheTimeout": null,
+          "dashLength": 10,
+          "dashes": false,
+          "datasource": "Prometheus",
+          "description": "",
+          "fill": 5,
+          "fillGradient": 0,
+          "gridPos": {
+            "h": 12,
+            "w": 8,
+            "x": 0,
+            "y": 4
+          },
+          "hiddenSeries": false,
+          "id": 12,
+          "legend": {
+            "avg": false,
+            "current": false,
+            "max": false,
+            "min": false,
+            "rightSide": true,
+            "show": true,
+            "total": false,
+            "values": false
+          },
+          "lines": true,
+          "linewidth": 1,
+          "links": [],
+          "nullPointMode": "null",
+          "options": {
+            "dataLinks": []
+          },
+          "percentage": false,
+          "pluginVersion": "6.6.0",
+          "pointradius": 2,
+          "points": false,
+          "renderer": "flot",
+          "scopedVars": {
+            "job": {
+              "selected": true,
+              "text": "sa05-gb-svc-rpt-extract-mas",
+              "value": "sa05-gb-svc-rpt-extract-mas"
+            }
+          },
+          "seriesOverrides": [
+            {
+              "alias": "used",
+              "color": "#C0D8FF"
+            },
+            {
+              "alias": "committed",
+              "color": "#1F60C4"
+            },
+            {
+              "alias": "max",
+              "color": "rgb(255, 0, 4)",
+              "fill": 0,
+              "linewidth": 5
+            }
+          ],
+          "spaceLength": 10,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "expr": "sum(jvm_memory_max_bytes{group=\"$group\", job=\"$job\", area=\"heap\", service=\"$service\"}\r)",
+              "format": "time_series",
+              "instant": false,
+              "interval": "",
+              "intervalFactor": 1,
+              "legendFormat": "max",
+              "refId": "A"
+            },
+            {
+              "expr": "sum(jvm_memory_committed_bytes{group=\"$group\", job=\"$job\", area=\"heap\", service=\"$service\"})",
+              "instant": false,
+              "legendFormat": "committed",
+              "refId": "B"
+            },
+            {
+              "expr": "sum(jvm_memory_used_bytes{group=\"$group\", job=\"$job\", area=\"heap\", service=\"$service\"}\r)",
+              "instant": false,
+              "legendFormat": "used",
+              "refId": "C"
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeRegions": [],
+          "timeShift": null,
+          "title": "Heap",
+          "tooltip": {
+            "shared": true,
+            "sort": 0,
+            "value_type": "individual"
+          },
+          "type": "graph",
+          "xaxis": {
+            "buckets": null,
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "format": "decbytes",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ],
+          "yaxis": {
+            "align": false,
+            "alignLevel": null
+          }
+        },
+        {
+          "aliasColors": {},
+          "bars": false,
+          "dashLength": 10,
+          "dashes": false,
+          "datasource": "Prometheus",
+          "fill": 5,
+          "fillGradient": 0,
+          "gridPos": {
+            "h": 12,
+            "w": 8,
+            "x": 8,
+            "y": 4
+          },
+          "hiddenSeries": false,
+          "id": 4,
+          "legend": {
+            "alignAsTable": false,
+            "avg": false,
+            "current": false,
+            "max": false,
+            "min": false,
+            "rightSide": true,
+            "show": true,
+            "total": false,
+            "values": false
+          },
+          "lines": true,
+          "linewidth": 1,
+          "nullPointMode": "null",
+          "options": {
+            "dataLinks": []
+          },
+          "percentage": false,
+          "pluginVersion": "6.6.0",
+          "pointradius": 2,
+          "points": false,
+          "renderer": "flot",
+          "scopedVars": {
+            "job": {
+              "selected": true,
+              "text": "sa05-gb-svc-rpt-extract-mas",
+              "value": "sa05-gb-svc-rpt-extract-mas"
+            }
+          },
+          "seriesOverrides": [
+            {
+              "alias": "used",
+              "color": "#C0D8FF"
+            },
+            {
+              "alias": "committed",
+              "color": "#1F60C4",
+              "linewidth": 4
+            },
+            {
+              "alias": "max",
+              "color": "rgb(255, 0, 0)",
+              "fill": 0,
+              "linewidth": 4
+            }
+          ],
+          "spaceLength": 10,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "expr": "sum(jvm_memory_max_bytes{group=\"$group\", job=\"$job\", area=\"nonheap\", service=\"$service\"})",
+              "legendFormat": "max",
+              "refId": "A"
+            },
+            {
+              "expr": "sum(jvm_memory_committed_bytes{group=\"$group\", job=\"$job\", area=\"nonheap\", service=\"$service\"})",
+              "legendFormat": "committed",
+              "refId": "B"
+            },
+            {
+              "expr": "sum(jvm_memory_used_bytes{group=\"$group\", job=\"$job\", area=\"nonheap\", service=\"$service\"}\r)",
+              "legendFormat": "used",
+              "refId": "C"
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeRegions": [],
+          "timeShift": null,
+          "title": "Non-Heap  ",
+          "tooltip": {
+            "shared": true,
+            "sort": 0,
+            "value_type": "individual"
+          },
+          "type": "graph",
+          "xaxis": {
+            "buckets": null,
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "format": "decbytes",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ],
+          "yaxis": {
+            "align": false,
+            "alignLevel": null
+          }
+        },
+        {
+          "aliasColors": {},
+          "bars": false,
+          "dashLength": 10,
+          "dashes": false,
+          "datasource": "Prometheus",
+          "fill": 5,
+          "fillGradient": 0,
+          "gridPos": {
+            "h": 12,
+            "w": 8,
+            "x": 16,
+            "y": 4
+          },
+          "hiddenSeries": false,
+          "id": 61,
+          "legend": {
+            "alignAsTable": false,
+            "avg": false,
+            "current": false,
+            "max": false,
+            "min": false,
+            "rightSide": true,
+            "show": true,
+            "total": false,
+            "values": false
+          },
+          "lines": true,
+          "linewidth": 1,
+          "nullPointMode": "null",
+          "options": {
+            "dataLinks": []
+          },
+          "percentage": false,
+          "pluginVersion": "6.6.0",
+          "pointradius": 2,
+          "points": false,
+          "renderer": "flot",
+          "scopedVars": {
+            "job": {
+              "selected": true,
+              "text": "sa05-gb-svc-rpt-extract-mas",
+              "value": "sa05-gb-svc-rpt-extract-mas"
+            }
+          },
+          "seriesOverrides": [
+            {
+              "alias": "used",
+              "color": "#C0D8FF"
+            },
+            {
+              "alias": "committed",
+              "color": "#1F60C4",
+              "linewidth": 4
+            },
+            {
+              "alias": "max",
+              "color": "rgb(255, 0, 0)",
+              "fill": 0,
+              "linewidth": 4
+            }
+          ],
+          "spaceLength": 10,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "expr": "sum(jvm_memory_max_bytes{group=\"$group\", job=\"$job\", service=\"$service\"})",
+              "legendFormat": "max",
+              "refId": "A"
+            },
+            {
+              "expr": "sum(jvm_memory_committed_bytes{group=\"$group\", job=\"$job\", service=\"$service\"})",
+              "legendFormat": "committed",
+              "refId": "B"
+            },
+            {
+              "expr": "sum(jvm_memory_used_bytes{group=\"$group\", job=\"$job\", service=\"$service\"}\r)",
+              "legendFormat": "used",
+              "refId": "C"
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeRegions": [],
+          "timeShift": null,
+          "title": "Total (heap + nonheap)",
+          "tooltip": {
+            "shared": true,
+            "sort": 0,
+            "value_type": "individual"
+          },
+          "type": "graph",
+          "xaxis": {
+            "buckets": null,
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "format": "decbytes",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ],
+          "yaxis": {
+            "align": false,
+            "alignLevel": null
+          }
+        }
+      ],
+      "repeat": "job",
+      "scopedVars": {
+        "job": {
+          "selected": true,
+          "text": "sa05-gb-svc-rpt-extract-mas",
+          "value": "sa05-gb-svc-rpt-extract-mas"
+        }
+      },
+      "title": "JVM MEMORY",
+      "type": "row"
+    },
+    {
+      "collapsed": true,
+      "datasource": null,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 15
+      },
+      "id": 40,
+      "panels": [
+        {
+          "aliasColors": {},
+          "bars": false,
+          "dashLength": 10,
+          "dashes": false,
+          "datasource": "Prometheus",
+          "fill": 1,
+          "fillGradient": 5,
+          "gridPos": {
+            "h": 12,
+            "w": 12,
+            "x": 0,
+            "y": 5
+          },
+          "hiddenSeries": false,
+          "id": 14,
+          "legend": {
+            "alignAsTable": true,
+            "avg": true,
+            "current": true,
+            "max": true,
+            "min": false,
+            "rightSide": true,
+            "show": true,
+            "total": false,
+            "values": true
+          },
+          "lines": true,
+          "linewidth": 1,
+          "nullPointMode": "null",
+          "options": {
+            "dataLinks": []
+          },
+          "percentage": false,
+          "pointradius": 2,
+          "points": false,
+          "renderer": "flot",
+          "repeat": null,
+          "repeatDirection": "v",
+          "scopedVars": {
+            "job": {
+              "selected": true,
+              "text": "sa05-gb-svc-rpt-extract-mas",
+              "value": "sa05-gb-svc-rpt-extract-mas"
+            }
+          },
+          "seriesOverrides": [
+            {
+              "alias": "live",
+              "color": "#FA6400"
+            },
+            {
+              "alias": "daemon",
+              "color": "#E0B400"
+            },
+            {
+              "alias": "peak",
+              "color": "#C4162A",
+              "linewidth": 3
+            }
+          ],
+          "spaceLength": 10,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "expr": "jvm_threads_peak_threads{group=\"$group\", job=\"$job\", service=\"$service\"}\r",
+              "legendFormat": "peak",
+              "refId": "A"
+            },
+            {
+              "expr": "jvm_threads_live_threads{group=\"$group\", job=\"$job\", service=\"$service\"}\r",
+              "legendFormat": "live",
+              "refId": "B"
+            },
+            {
+              "expr": "jvm_threads_daemon_threads{group=\"$group\", job=\"$job\", service=\"$service\"}\r\n\r",
+              "legendFormat": "daemon",
+              "refId": "C"
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeRegions": [],
+          "timeShift": null,
+          "title": "Threads Count",
+          "tooltip": {
+            "shared": true,
+            "sort": 0,
+            "value_type": "individual"
+          },
+          "type": "graph",
+          "xaxis": {
+            "buckets": null,
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "format": "none",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": "0",
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ],
+          "yaxis": {
+            "align": false,
+            "alignLevel": null
+          }
+        },
+        {
+          "aliasColors": {},
+          "bars": false,
+          "dashLength": 10,
+          "dashes": false,
+          "datasource": "Prometheus",
+          "fill": 0,
+          "fillGradient": 7,
+          "gridPos": {
+            "h": 12,
+            "w": 12,
+            "x": 12,
+            "y": 5
+          },
+          "hiddenSeries": false,
+          "id": 6,
+          "legend": {
+            "alignAsTable": true,
+            "avg": false,
+            "current": false,
+            "max": false,
+            "min": false,
+            "rightSide": true,
+            "show": true,
+            "total": false,
+            "values": false
+          },
+          "lines": true,
+          "linewidth": 2,
+          "nullPointMode": "null",
+          "options": {
+            "dataLinks": []
+          },
+          "percentage": false,
+          "pointradius": 2,
+          "points": false,
+          "renderer": "flot",
+          "repeat": null,
+          "repeatDirection": "v",
+          "scopedVars": {
+            "job": {
+              "selected": true,
+              "text": "sa05-gb-svc-rpt-extract-mas",
+              "value": "sa05-gb-svc-rpt-extract-mas"
+            }
+          },
+          "seriesOverrides": [],
+          "spaceLength": 10,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "expr": "jvm_threads_states_threads{group=\"$group\", job=\"$job\", state=\"blocked\", service=\"$service\"}",
+              "legendFormat": "BLOCKED",
+              "refId": "A"
+            },
+            {
+              "expr": "jvm_threads_states_threads{group=\"$group\", job=\"$job\", state=\"new\", service=\"$service\"}",
+              "legendFormat": "NEW",
+              "refId": "B"
+            },
+            {
+              "expr": "jvm_threads_states_threads{group=\"$group\", job=\"$job\", state=\"runnable\", service=\"$service\"}",
+              "legendFormat": "RUNNABLE",
+              "refId": "C"
+            },
+            {
+              "expr": "jvm_threads_states_threads{group=\"$group\", job=\"$job\", state=\"terminated\", service=\"$service\"}\r",
+              "legendFormat": "TERMINATED",
+              "refId": "D"
+            },
+            {
+              "expr": "jvm_threads_states_threads{group=\"$group\", job=\"$job\", state=\"timed-waiting\", service=\"$service\"}\r",
+              "legendFormat": "TIMED_WAITING",
+              "refId": "E"
+            },
+            {
+              "expr": "jvm_threads_states_threads{group=\"$group\", job=\"$job\", state=\"waiting\", service=\"$service\"}\r",
+              "legendFormat": "WAITING",
+              "refId": "F"
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeRegions": [],
+          "timeShift": null,
+          "title": "Threads States",
+          "tooltip": {
+            "shared": true,
+            "sort": 0,
+            "value_type": "individual"
+          },
+          "type": "graph",
+          "xaxis": {
+            "buckets": null,
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "format": "none",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": "0",
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ],
+          "yaxis": {
+            "align": false,
+            "alignLevel": null
+          }
+        }
+      ],
+      "repeat": "job",
+      "scopedVars": {
+        "job": {
+          "selected": true,
+          "text": "sa05-gb-svc-rpt-extract-mas",
+          "value": "sa05-gb-svc-rpt-extract-mas"
+        }
+      },
+      "title": "JVM THREADS",
+      "type": "row"
+    },
+    {
+      "collapsed": true,
+      "datasource": null,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 31
+      },
+      "id": 10,
+      "panels": [
+        {
+          "aliasColors": {},
+          "bars": false,
+          "dashLength": 10,
+          "dashes": false,
+          "datasource": "Prometheus",
+          "fill": 5,
+          "fillGradient": 2,
+          "gridPos": {
+            "h": 11,
+            "w": 8,
+            "x": 0,
+            "y": 6
+          },
+          "hiddenSeries": false,
+          "id": 27,
+          "legend": {
+            "alignAsTable": false,
+            "avg": false,
+            "current": false,
+            "max": false,
+            "min": false,
+            "rightSide": true,
+            "show": true,
+            "total": false,
+            "values": false
+          },
+          "lines": true,
+          "linewidth": 2,
+          "nullPointMode": "null",
+          "options": {
+            "dataLinks": []
+          },
+          "percentage": false,
+          "pointradius": 2,
+          "points": false,
+          "renderer": "flot",
+          "scopedVars": {
+            "job": {
+              "selected": true,
+              "text": "sa05-gb-svc-rpt-extract-mas",
+              "value": "sa05-gb-svc-rpt-extract-mas"
+            }
+          },
+          "seriesOverrides": [
+            {
+              "alias": "end of minor GC",
+              "color": "#DEB6F2"
+            },
+            {
+              "alias": "end of major GC",
+              "color": "#C4162A"
+            }
+          ],
+          "spaceLength": 10,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "expr": "rate(jvm_gc_pause_seconds_count{group=\"$group\", action=\"end of minor GC\",  job=\"$job\", service=\"$service\"}[1m])\r",
+              "instant": false,
+              "legendFormat": "end of minor GC",
+              "refId": "A"
+            },
+            {
+              "expr": "rate(jvm_gc_pause_seconds_count{group=\"$group\", action=\"end of major GC\",  job=\"$job\", service=\"$service\"}[1m])\r",
+              "instant": false,
+              "legendFormat": "end of major GC",
+              "refId": "B"
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeRegions": [],
+          "timeShift": null,
+          "title": "Collection",
+          "tooltip": {
+            "shared": true,
+            "sort": 0,
+            "value_type": "individual"
+          },
+          "type": "graph",
+          "xaxis": {
+            "buckets": null,
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "format": "ops",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": "0",
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ],
+          "yaxis": {
+            "align": false,
+            "alignLevel": null
+          }
+        },
+        {
+          "aliasColors": {},
+          "bars": false,
+          "dashLength": 10,
+          "dashes": false,
+          "datasource": "Prometheus",
+          "fill": 2,
+          "fillGradient": 0,
+          "gridPos": {
+            "h": 11,
+            "w": 8,
+            "x": 8,
+            "y": 6
+          },
+          "hiddenSeries": false,
+          "id": 42,
+          "legend": {
+            "alignAsTable": false,
+            "avg": false,
+            "current": false,
+            "max": false,
+            "min": false,
+            "rightSide": true,
+            "show": true,
+            "total": false,
+            "values": false
+          },
+          "lines": true,
+          "linewidth": 2,
+          "nullPointMode": "null",
+          "options": {
+            "dataLinks": []
+          },
+          "percentage": false,
+          "pointradius": 2,
+          "points": false,
+          "renderer": "flot",
+          "scopedVars": {
+            "job": {
+              "selected": true,
+              "text": "sa05-gb-svc-rpt-extract-mas",
+              "value": "sa05-gb-svc-rpt-extract-mas"
+            }
+          },
+          "seriesOverrides": [
+            {
+              "alias": "av"
+            }
+          ],
+          "spaceLength": 10,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "expr": "rate(jvm_gc_pause_seconds_sum{group=\"$group\", job=\"$job\", service=\"$service\"}[1m])/rate(jvm_gc_pause_seconds_count{group=\"$group\", job=\"$job\", service=\"$service\"}[1m])",
+              "legendFormat": "avg {{action}} ({{cause}})",
+              "refId": "A"
+            },
+            {
+              "expr": "jvm_gc_pause_seconds_max{group=\"$group\", job=\"$job\", service=\"$service\"}",
+              "legendFormat": "max {{action}} ({{cause}})",
+              "refId": "B"
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeRegions": [],
+          "timeShift": null,
+          "title": "Pause Durations ",
+          "tooltip": {
+            "shared": true,
+            "sort": 0,
+            "value_type": "individual"
+          },
+          "type": "graph",
+          "xaxis": {
+            "buckets": null,
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ],
+          "yaxis": {
+            "align": false,
+            "alignLevel": null
+          }
+        },
+        {
+          "aliasColors": {},
+          "bars": false,
+          "dashLength": 10,
+          "dashes": false,
+          "datasource": null,
+          "fill": 1,
+          "fillGradient": 0,
+          "gridPos": {
+            "h": 11,
+            "w": 8,
+            "x": 16,
+            "y": 6
+          },
+          "hiddenSeries": false,
+          "id": 63,
+          "legend": {
+            "avg": false,
+            "current": false,
+            "max": false,
+            "min": false,
+            "rightSide": true,
+            "show": true,
+            "total": false,
+            "values": false
+          },
+          "lines": true,
+          "linewidth": 1,
+          "nullPointMode": "null",
+          "options": {
+            "dataLinks": []
+          },
+          "percentage": false,
+          "pointradius": 2,
+          "points": false,
+          "renderer": "flot",
+          "scopedVars": {
+            "job": {
+              "selected": true,
+              "text": "sa05-gb-svc-rpt-extract-mas",
+              "value": "sa05-gb-svc-rpt-extract-mas"
+            }
+          },
+          "seriesOverrides": [],
+          "spaceLength": 10,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "expr": "rate(jvm_gc_memory_allocated_bytes_total{group=\"$group\", job=\"$job\", service=\"$service\"}[1m])\r",
+              "legendFormat": "Allocated bytes",
+              "refId": "A"
+            },
+            {
+              "expr": "rate(jvm_gc_memory_promoted_bytes_total{group=\"$group\", job=\"$job\", service=\"$service\"}[1m])\r",
+              "legendFormat": "Promoted bytes",
+              "refId": "B"
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeRegions": [],
+          "timeShift": null,
+          "title": "GC Memory",
+          "tooltip": {
+            "shared": true,
+            "sort": 0,
+            "value_type": "individual"
+          },
+          "type": "graph",
+          "xaxis": {
+            "buckets": null,
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ],
+          "yaxis": {
+            "align": false,
+            "alignLevel": null
+          }
+        }
+      ],
+      "repeat": "job",
+      "scopedVars": {
+        "job": {
+          "selected": true,
+          "text": "sa05-gb-svc-rpt-extract-mas",
+          "value": "sa05-gb-svc-rpt-extract-mas"
+        }
+      },
+      "title": "GARBAGE COLLECTION",
+      "type": "row"
+    },
+    {
+      "collapsed": true,
+      "datasource": null,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 63
+      },
+      "id": 69,
+      "panels": [
+        {
+          "columns": [
+            {
+              "text": "Avg",
+              "value": "avg"
+            },
+            {
+              "text": "Current",
+              "value": "current"
+            }
+          ],
+          "datasource": "Prometheus",
+          "fontSize": "100%",
+          "gridPos": {
+            "h": 6,
+            "w": 7,
+            "x": 0,
+            "y": 7
+          },
+          "id": 77,
+          "options": {},
+          "pageSize": null,
+          "scopedVars": {
+            "job": {
+              "selected": true,
+              "text": "sa05-gb-svc-rpt-extract-mas",
+              "value": "sa05-gb-svc-rpt-extract-mas"
+            }
+          },
+          "showHeader": true,
+          "sort": {
+            "col": 0,
+            "desc": true
+          },
+          "styles": [
+            {
+              "alias": "Time",
+              "align": "auto",
+              "dateFormat": "YYYY-MM-DD HH:mm:ss",
+              "pattern": "Time",
+              "type": "date"
+            },
+            {
+              "alias": "",
+              "align": "left",
+              "colorMode": null,
+              "colors": [
+                "rgba(245, 54, 54, 0.9)",
+                "rgba(237, 129, 40, 0.89)",
+                "rgba(50, 172, 45, 0.97)"
+              ],
+              "decimals": 2,
+              "pattern": "/.*/",
+              "thresholds": [],
+              "type": "number",
+              "unit": "short"
+            }
+          ],
+          "targets": [
+            {
+              "expr": "jdbc_connections_active{group=\"$group\", job=\"$job\", name=\"default\", service=\"$service\"}\r",
+              "legendFormat": "active",
+              "refId": "A"
+            },
+            {
+              "expr": "jdbc_connections_min{group=\"$group\", job=\"$job\", name=\"default\", service=\"$service\"}\r",
+              "legendFormat": "min",
+              "refId": "B"
+            },
+            {
+              "expr": "jdbc_connections_max{group=\"$group\", job=\"$job\", name=\"default\", service=\"$service\"}\r",
+              "legendFormat": "max",
+              "refId": "C"
+            },
+            {
+              "expr": "jdbc_connections_idle{group=\"$group\", job=\"$job\", name=\"default\", service=\"$service\"}\r",
+              "legendFormat": "idle",
+              "refId": "D"
+            }
+          ],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "JDBC Connections",
+          "transform": "timeseries_aggregations",
+          "type": "table"
+        },
+        {
+          "aliasColors": {},
+          "bars": false,
+          "dashLength": 10,
+          "dashes": false,
+          "datasource": "Prometheus",
+          "fill": 1,
+          "fillGradient": 0,
+          "gridPos": {
+            "h": 14,
+            "w": 8,
+            "x": 7,
+            "y": 7
+          },
+          "hiddenSeries": false,
+          "id": 71,
+          "legend": {
+            "avg": false,
+            "current": false,
+            "max": false,
+            "min": false,
+            "rightSide": true,
+            "show": true,
+            "total": false,
+            "values": false
+          },
+          "lines": true,
+          "linewidth": 3,
+          "nullPointMode": "null",
+          "options": {
+            "dataLinks": []
+          },
+          "percentage": false,
+          "pointradius": 2,
+          "points": false,
+          "renderer": "flot",
+          "scopedVars": {
+            "job": {
+              "selected": true,
+              "text": "sa05-gb-svc-rpt-extract-mas",
+              "value": "sa05-gb-svc-rpt-extract-mas"
+            }
+          },
+          "seriesOverrides": [
+            {
+              "alias": "Open Files",
+              "color": "#E02F44"
+            },
+            {
+              "alias": "Max Files",
+              "color": "#A352CC"
+            }
+          ],
+          "spaceLength": 10,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "expr": "process_files_open_files{group=\"$group\",job=\"$job\", service=\"$service\"}\r",
+              "legendFormat": "Open Files",
+              "refId": "A"
+            },
+            {
+              "expr": "process_files_max_files{group=\"$group\",job=\"$job\", service=\"$service\"}",
+              "legendFormat": "Max Files",
+              "refId": "B"
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeRegions": [],
+          "timeShift": null,
+          "title": "Descriptor Count",
+          "tooltip": {
+            "shared": true,
+            "sort": 0,
+            "value_type": "individual"
+          },
+          "type": "graph",
+          "xaxis": {
+            "buckets": null,
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ],
+          "yaxis": {
+            "align": false,
+            "alignLevel": null
+          }
+        },
+        {
+          "aliasColors": {},
+          "bars": false,
+          "dashLength": 10,
+          "dashes": false,
+          "datasource": null,
+          "fill": 3,
+          "fillGradient": 0,
+          "gridPos": {
+            "h": 14,
+            "w": 9,
+            "x": 15,
+            "y": 7
+          },
+          "hiddenSeries": false,
+          "id": 73,
+          "legend": {
+            "avg": false,
+            "current": false,
+            "max": false,
+            "min": false,
+            "rightSide": true,
+            "show": true,
+            "total": false,
+            "values": false
+          },
+          "lines": true,
+          "linewidth": 2,
+          "nullPointMode": "null",
+          "options": {
+            "dataLinks": []
+          },
+          "percentage": false,
+          "pointradius": 2,
+          "points": false,
+          "renderer": "flot",
+          "scopedVars": {
+            "job": {
+              "selected": true,
+              "text": "sa05-gb-svc-rpt-extract-mas",
+              "value": "sa05-gb-svc-rpt-extract-mas"
+            }
+          },
+          "seriesOverrides": [],
+          "spaceLength": 10,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "expr": "logback_events_total{group=\"$group\", job=\"$job\", service=\"$service\"}",
+              "legendFormat": "{{level}}",
+              "refId": "A"
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeRegions": [],
+          "timeShift": null,
+          "title": "Total Logback Events",
+          "tooltip": {
+            "shared": true,
+            "sort": 0,
+            "value_type": "individual"
+          },
+          "type": "graph",
+          "xaxis": {
+            "buckets": null,
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ],
+          "yaxis": {
+            "align": false,
+            "alignLevel": null
+          }
+        },
+        {
+          "columns": [
+            {
+              "text": "Avg",
+              "value": "avg"
+            },
+            {
+              "text": "Current",
+              "value": "current"
+            }
+          ],
+          "datasource": "Prometheus",
+          "fontSize": "100%",
+          "gridPos": {
+            "h": 8,
+            "w": 7,
+            "x": 0,
+            "y": 13
+          },
+          "id": 79,
+          "options": {},
+          "pageSize": null,
+          "scopedVars": {
+            "job": {
+              "selected": true,
+              "text": "sa05-gb-svc-rpt-extract-mas",
+              "value": "sa05-gb-svc-rpt-extract-mas"
+            }
+          },
+          "showHeader": true,
+          "sort": {
+            "col": 0,
+            "desc": true
+          },
+          "styles": [
+            {
+              "alias": "Time",
+              "align": "auto",
+              "dateFormat": "YYYY-MM-DD HH:mm:ss",
+              "pattern": "Time",
+              "type": "date"
+            },
+            {
+              "alias": "",
+              "align": "left",
+              "colorMode": null,
+              "colors": [
+                "rgba(245, 54, 54, 0.9)",
+                "rgba(237, 129, 40, 0.89)",
+                "rgba(50, 172, 45, 0.97)"
+              ],
+              "decimals": 2,
+              "pattern": "/.*/",
+              "thresholds": [],
+              "type": "number",
+              "unit": "short"
+            }
+          ],
+          "targets": [
+            {
+              "expr": "rate(tomcat_sessions_expired_sessions_total{group=\"$group\", job=\"$job\", service=\"$service\"}[1m])",
+              "instant": true,
+              "legendFormat": "Expired",
+              "refId": "A"
+            },
+            {
+              "expr": "rate(tomcat_sessions_active_current_sessions{group=\"$group\", job=\"$job\", service=\"$service\"}[1m])",
+              "instant": true,
+              "legendFormat": "Active Current",
+              "refId": "B"
+            },
+            {
+              "expr": "rate(tomcat_sessions_active_max_sessions{group=\"$group\", job=\"$job\", service=\"$service\"}[1m])",
+              "instant": true,
+              "legendFormat": "Active Max",
+              "refId": "C"
+            },
+            {
+              "expr": "rate(tomcat_sessions_alive_max_seconds{group=\"$group\", job=\"$job\", service=\"$service\"}[1m])",
+              "instant": true,
+              "legendFormat": "Alive Max",
+              "refId": "D"
+            },
+            {
+              "expr": "rate(tomcat_sessions_created_sessions_total{group=\"$group\", job=\"$job\", service=\"$service\"}[1m])",
+              "instant": true,
+              "legendFormat": "Total Created",
+              "refId": "E"
+            },
+            {
+              "expr": "rate(tomcat_sessions_rejected_sessions_total{group=\"$group\", job=\"$job\", service=\"$service\"}[1m])",
+              "instant": true,
+              "legendFormat": "Total Rejected",
+              "refId": "F"
+            }
+          ],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Tomcat Sessions",
+          "transform": "timeseries_aggregations",
+          "type": "table"
+        }
+      ],
+      "repeat": "job",
+      "scopedVars": {
+        "job": {
+          "selected": true,
+          "text": "sa05-gb-svc-rpt-extract-mas",
+          "value": "sa05-gb-svc-rpt-extract-mas"
+        }
+      },
+      "title": "Micsellaneous",
+      "type": "row"
+    }
+  ],
+  "refresh": "1m",
+  "schemaVersion": 22,
+  "style": "dark",
+  "tags": [
+    "grafana",
+    "jvm_metrics",
+    "service_monitoring"
+  ],
+  "templating": {
+    "list": [
+      {
+        "allValue": null,
+        "current": {
+          "selected": true,
+          "text": "sa-05",
+          "value": "sa-05"
+        },
+        "datasource": "Prometheus",
+        "definition": "label_values(group)",
+        "hide": 0,
+        "includeAll": false,
+        "label": "ENV",
+        "multi": false,
+        "name": "group",
+        "options": [],
+        "query": "label_values(group)",
+        "refresh": 1,
+        "regex": "",
+        "skipUrlSync": false,
+        "sort": 0,
+        "tagValuesQuery": "",
+        "tags": [],
+        "tagsQuery": "",
+        "type": "query",
+        "useTags": false
+      },
+      {
+        "allValue": null,
+        "current": {
+          "text": "sa05-gb-svc-rpt-extract-mas",
+          "value": "sa05-gb-svc-rpt-extract-mas"
+        },
+        "datasource": "Prometheus",
+        "definition": "label_values(hikaricp_connections{group=\"$group\"},job)",
+        "hide": 0,
+        "includeAll": false,
+        "label": "Instance",
+        "multi": false,
+        "name": "job",
+        "options": [],
+        "query": "label_values(hikaricp_connections{group=\"$group\"},job)",
+        "refresh": 1,
+        "regex": "/gb-svc-*/",
+        "skipUrlSync": false,
+        "sort": 0,
+        "tagValuesQuery": "",
+        "tags": [],
+        "tagsQuery": "",
+        "type": "query",
+        "useTags": false
+      },
+      {
+        "allValue": null,
+        "current": {
+          "text": "extractor",
+          "value": "extractor"
+        },
+        "datasource": "Prometheus",
+        "definition": "label_values(hikaricp_connections{group=\"$group\", job=\"$job\"},service)",
+        "hide": 0,
+        "includeAll": false,
+        "label": null,
+        "multi": false,
+        "name": "service",
+        "options": [
+          {
+            "selected": true,
+            "text": "extractor",
+            "value": "extractor"
+          }
+        ],
+        "query": "label_values(hikaricp_connections{group=\"$group\", job=\"$job\"},service)",
+        "refresh": 0,
+        "regex": "",
+        "skipUrlSync": false,
+        "sort": 0,
+        "tagValuesQuery": "",
+        "tags": [],
+        "tagsQuery": "",
+        "type": "query",
+        "useTags": false
+      }
+    ]
+  },
+  "time": {
+    "from": "now-6h",
+    "to": "now"
+  },
+  "timepicker": {
+    "refresh_intervals": [
+      "5s",
+      "10s",
+      "30s",
+      "1m",
+      "5m",
+      "15m",
+      "30m",
+      "1h",
+      "2h",
+      "1d"
+    ]
+  },
+  "timezone": "browser",
+  "title": "Service Monitoring",
+  "uid": "9XA9o0k7z",
+  "version": 353
+}
