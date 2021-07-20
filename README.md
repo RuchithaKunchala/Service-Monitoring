@@ -1,5 +1,5 @@
 # Service Monitoring Dashboard
-This document will help you know about Database Monitoring Dashboard and some related aspects. The currently illustriated Service Monitoring Dashboard is built to monitor the Time Series Data Base for Standard Chartered Applications taken in real time ensuring availabilty and performance.
+This document will help you know about Database Monitoring Dashboard and some related aspects. The currently illustriated Service Monitoring Dashboard is built to monitor the Time Series Data Base for Applications taken in real time ensuring availabilty and performance.
 
 # Need for Monitoring?
 Continuous Monitoring is a process to monitor and identify compliance issues and security risks throughout each phase of DevOps and IT operations lifecycle. Monitoring the services not only gives you the ability to respond quickly to problems and outages, it can also help to anticipate and prevent errors that may occur in the future which sometimes may lead to system crash or frequent ups and downs in the server. The currently built Service Monitoring Dashboard allows the users to keep an eye and view into the performance & health of an application. It also helps the viewers to quickly detect and resolve any issues. 
