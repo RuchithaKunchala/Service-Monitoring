@@ -154,11 +154,12 @@ This covers the main aspects of the project building. You can create a custom da
 
 Creating a Dashboard from scratch 
 
-1.	Click on the Grafana logo in the left-hand corner.
-2.	Open the Dashboards dropdown.
-3.	Click on New.
+1.	Click on the **Grafana** logo in the left-hand corner.
+2.	Open the **Dashboards** dropdown.
+3.	Click on **New**.
 4.	Select the type of panel you want to display (Graph, singlestat, table, pie chart, etc).
-5.	Click on the Panel Title and then click on the edit button as depicted below:
+5.	Click on the **Panel Title** and then click on the edit button as depicted below:
+
 
 6.	From here, simply designate the desired metrics to display. A completed example is pictured below:
 
@@ -173,7 +174,7 @@ In the similar way, we can create many panels and make a dynamic dashboard for m
 
 # Summary
 
-The currently built Service Monitoring Dashboard monitors 2 different micro-services from different environments in real time while ensuring availability and performance. It monitors metrics such as the CPU Usage, JVM Memory, Garbage Collection, Connection Pool and some other basic statistics. 
+The currently built Service Monitoring Dashboard monitors two different micro-services from different environments in real time while ensuring availability and performance. It monitors metrics such as the CPU Usage, JVM Memory, Garbage Collection, Connection Pool and some other basic statistics. 
 
 # References
 1.	Udemy
