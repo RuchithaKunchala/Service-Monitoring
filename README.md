@@ -158,7 +158,7 @@ Prometheus provides a functional query language called PromQL (Prometheus Query 
 
 You can refer the following link, which has some examples, for a better understanding,
 
-https://prometheus.io/docs/prometheus/latest/querying/examples/
+[https://prometheus.io/docs/prometheus/latest/querying/examples/](https://prometheus.io/docs/prometheus/latest/querying/examples/)
 
 # Building Dashboard
 
