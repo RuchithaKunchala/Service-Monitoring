@@ -120,8 +120,8 @@ A collection of instances with the same purpose, a process replicated for scalab
 
 After both Grafana and Prometheus services are installed successfully, follow the below steps:
 Now that the Grafana server is up, we can configure it from our web-browser. Open the following URL from the browser,
-http://localhost:3000 or 
-http://IP_address_of_server:3000
+
+[http://localhost:3000](http://localhost:3000) or [http://IP_address_of_server:3000](http://IP_address_of_server:3000)
 
 After logging in, we would then be directed to the homepage, here we would configure the data source i.e., Prometheus. Click on ‘Add Data Source’
 
@@ -133,14 +133,12 @@ Once the data source has been added successfully, we can either create our own c
 
 That’s it! Now the Prometheus should start up and you should be able to browse to a status page about itself at the following URL,
 
-http://localhost:9090/ or 
-http://IP_address_of_server:9090/
+[http://localhost:9090/](http://localhost:9090/) or [http://IP_address_of_server:9090/](http://IP_address_of_server:9090/)
 
 Give it about 30 seconds to collect data about itself from its own HTTP metrics endpoint.
 You can also verify that Prometheus is serving metrics about itself by navigating to its own metrics endpoint,
 
-http://localhost:9090/metrics or
-http://IP_address_of_server:9090/metrics
+[http://localhost:9090/metrics](http://localhost:9090/metrics) or [http://IP_address_of_server:9090/metrics](http://IP_address_of_server:9090/metrics)
 
 ### Querying Data
 
