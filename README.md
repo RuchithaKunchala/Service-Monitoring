@@ -5,7 +5,7 @@ This document will help you know about Database Monitoring Dashboard and some re
 Continuous Monitoring is a process to monitor and identify compliance issues and security risks throughout each phase of DevOps and IT operations lifecycle. Monitoring the services not only gives you the ability to respond quickly to problems and outages, it can also help to anticipate and prevent errors that may occur in the future which sometimes may lead to system crash or frequent ups and downs in the server. The currently built Service Monitoring Dashboard allows the users to keep an eye and view into the performance & health of an application. It also helps the viewers to quickly detect and resolve any issues. 
 
 # Dependencies used
-###1. GRAFANA
+### Grafana
 
 Grafana allows you to query, visualize, alert on and understand your metrics no matter where they are stored. Create, explore, and share dashboards with your team and foster a data driven culture. It enables to visualise fast and flexible client-side graphs with a multitude of options.
 
@@ -16,7 +16,7 @@ Grafana allows you to query, visualize, alert on and understand your metrics no 
 * **Alerting**: Visually define alert rules for your most important metrics. Grafana will continuously evaluate and send notifications to systems like Slack, PagerDuty, VictorOps, OpsGenie.
 * **Mixed Data Sources**: Mix different data sources in the same graph! You can specify a data source on a per-query basis. This works for even custom datasources.
 
-**2. PROMETHEUS**
+### Prometheus 
 
 Prometheus is a systems and service monitoring system. It collects metrics from configured targets via a pull model at given intervals, evaluates rule expressions, displays the results, and can trigger alerts when specified conditions are observed. 
 
@@ -31,13 +31,13 @@ The features that distinguish Prometheus from other metrics and monitoring syste
 * Multiple modes of **graphing and dashboarding support**
 * Support for hierarchical and horizontal **federation**
 
-**3. HTTP ENDPOINTS**
+### HTTP Endpoints
 
 Endpoints allow you to monitor and interact with your application. Spring boot actuator provides inbuilt HTTP endpoints to any application for health checks and metrics for different monitoring and management purposes. These Actuator endpoints are exposed over JMX and HTTP, most of the times HTTP based actuators endpoints are used because they are easy to access over the browser.
 
 # Getting Started
 
-**1. INSTALLING THE SERVICES:**
+### INstalling the Services
 
 Grafana and Prometheus, both the packages are installed on Unix Machine. 
 Use the below command to download Grafana,
@@ -86,7 +86,7 @@ Command to kill the current PID,
    kill -9 $(lsof -t -i:9090)
 ```
 
-**2. CONFIGURING HTTP ENDPOINTS:**
+### Configuring HTTP Endpoints
 
 Configure Prometheus to monitor the hosts which are exposed through http endpoints. In order to do this, modify Prometheus’s configuration file. By default, Prometheus looks for the file prometheus.yml in the current working directory.
 To get more insights onto configuration of the YAML file, check the following Documentation on Prometheus website,
@@ -95,14 +95,28 @@ https://prometheus.io/docs/introduction/first_steps/
 
 Here’s a sample configuration that is automatically available on YAML file of prometheus:
 
-![jobssample](https://user-images.githubusercontent.com/60230072/126484234-64faf95b-8392-461f-b38d-1bce5ffa6704.jpg)
+```sh
+global:
+  scrape_interval: 10s
+
+  external_labels:
+    monitor: 'media_search'
+
+scrape_configs:
+  - job_name: 'media_search'
+
+    scrape_interval: 10s
+
+    static_configs:
+      - targets: ['localhost:9888', 'localhost:9988', 'localhost:9989']
+``` 
 
 The above sample file is configured such that it’s scraping metrics from the servers running at localhost:9888, localhost:9988 and localhost:9989
 
 In prometheus terms, an endpoint you can scrape is called an instance, usually corresponding to a single process. 
 A collection of instances with the same purpose, a process replicated for scalability or reliability for example, is called a job.
 
-**3. INTEGRATING PROMETHEUS TO GRAFANA:**
+### Integrating Prometheus to Grafana
 
 After both Grafana and Prometheus services are installed successfully, follow the below steps:
 Now that the Grafana server is up, we can configure it from our web-browser. Open the following URL from the browser,
@@ -118,22 +132,25 @@ Next, we need to enter the Prometheus details. Once you have entered the details
 Once the data source has been added successfully, we can either create our own custom dashboard or can use one of many dashboards available on the Grafana official website.
 
 That’s it! Now the Prometheus should start up and you should be able to browse to a status page about itself at the following URL,
-http://localhost:9090/ or
+
+http://localhost:9090/ or 
 http://IP_address_of_server:9090/
 
 Give it about 30 seconds to collect data about itself from its own HTTP metrics endpoint.
 You can also verify that Prometheus is serving metrics about itself by navigating to its own metrics endpoint,
+
 http://localhost:9090/metrics or
 http://IP_address_of_server:9090/metrics
 
-**4. QUERYING DATA:**
+### Querying Data
 
 Prometheus provides a functional query language called PromQL (Prometheus Query Language) that lets the user select and aggregate time series data in real time. The result of an expression can either be shown as a graph, viewed as tabular data in Prometheus’s expression browser, or consumed by external system via the HTTP API.
 
 You can refer the following link, which has some examples, for a better understanding,
+
 https://prometheus.io/docs/prometheus/latest/querying/examples/
 
-**5. BUILDING DASHBOARD:**
+### Building Dashboard
 
 This covers the main aspects of the project building. You can create a custom dashboard that is specific to your application. The dashboard can be built by either starting from scratch or duplicating an existing dashboard.
 
