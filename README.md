@@ -223,7 +223,7 @@ The currently built Service Monitoring Dashboard monitors two different micro-se
 
 <!-- REFERENCES -->
 # References
-1.	Udemy
-2.	Grafana Documentation
-3.	Prometheus Documentation
-4.	YouTube
+*	Udemy
+*	Grafana Documentation
+*	Prometheus Documentation
+*	YouTube
