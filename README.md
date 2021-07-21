@@ -37,7 +37,7 @@ Endpoints allow you to monitor and interact with your application. Spring boot a
 
 # Getting Started
 
-### INstalling the Services
+### Installing the Services
 
 Grafana and Prometheus, both the packages are installed on Unix Machine. 
 Use the below command to download Grafana,
