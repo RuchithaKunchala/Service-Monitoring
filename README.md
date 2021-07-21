@@ -1,3 +1,25 @@
+<!-- TABLE OF CONTENTS -->
+<details open="open">
+  <summary>Table of Contents</summary>
+  <ol> 
+     <li><a href="#service-monitoring-dashboard">Service Monitoring Dashboard</a></li>
+     <li><a href="#need-for-monitoring">Need for Monitoring?</a></li>
+     <li><a href="#dependencies-used">Dependencies Used</a></li>
+     <li><a href="#grafana">Grafana</a></li>
+     <li><a href="#prometheus">Prometheus</a></li>
+     <li><a href="#http-endpoints">HTTP Endpoints</a></li>
+     <li><a href="#getting-started">Getting Started</a></li>
+     <li><a href="#installing-the-services">Installing the Services</a></li>
+     <li><a href="#configuring-http-endpoints">Configuring HTTP Endpoints</a></li>
+     <li><a href="#integrating-prometheus-to-grafana">Integrating Prometheus to Grafana</a></li>
+     <li><a href="#querying-data">Querying Data</a></li>
+     <li><a href="#building-dashboard">Building Dashboard</a></li>
+     <li><a href="#summary">Summary</a></li>
+     <li><a href="#references">References</a></li>
+  </ol>
+</details>
+
+
 <!-- SERVICE MONITORING DASHBOARD -->
 # Service Monitoring Dashboard
 This document will help you know about Database Monitoring Dashboard and some related aspects. The currently illustriated Service Monitoring Dashboard is built to monitor the Time Series Data Base for Applications taken in real time ensuring availabilty and performance.
@@ -7,7 +29,7 @@ This document will help you know about Database Monitoring Dashboard and some re
 Continuous Monitoring is a process to monitor and identify compliance issues and security risks throughout each phase of DevOps and IT operations lifecycle. Monitoring the services not only gives you the ability to respond quickly to problems and outages, it can also help to anticipate and prevent errors that may occur in the future which sometimes may lead to system crash or frequent ups and downs in the server. The currently built Service Monitoring Dashboard allows the users to keep an eye and view into the performance & health of an application. It also helps the viewers to quickly detect and resolve any issues. 
 
 <!-- DEPENDENCIES USED -->
-# Dependencies used
+# Dependencies Used
 
 * Grafana
 * Prometheus
