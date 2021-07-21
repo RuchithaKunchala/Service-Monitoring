@@ -46,25 +46,42 @@ https://artifactory.global.standardchartered.com/artifactory/generic-release/gra
 
 Next extract the tar package,
 
-tar –xvzf grafana-6.6.0.linux-amd64.tar.gz
+```sh
+   tar –xvzf grafana-6.6.0.linux-amd64.tar.gz
+  ```
 
 Move to the Grafana package. Now, to start the service we have to execute the following command:
-./grafana-server
+
+```sh
+   ./grafana-server
+```
 
 NOTE: To restart the Grafana Service, kill the PID of Grafana and run the above-mentioned command again.
 
 Go to https://prometheus.io/download/
-Download prometheus-2.28.1.linux-amd64.tar.gz to any path in your Linux server.
 
-tar –xvzf  prometheus-2.28.1.linux-amd64.tar.gz
+Download the following command to any path in your Linux server.
+```sh
+   prometheus-2.28.1.linux-amd64.tar.gz
+```
+
+```sh
+   tar –xvzf  prometheus-2.28.1.linux-amd64.tar.gz
+```
 
 Move to the Prometheus package. Now, to start the service execute the following command,
-./prometheus
+
+```sh
+   ./prometheus
+```
 
 NOTE: To restart the Prometheus Service, kill the PID of Grafana and run the above-mentioned command again.
 
 Command to kill the current PID,
-kill -9 $(lsof -t -i:9090)
+
+```sh
+   kill -9 $(lsof -t -i:9090)
+```
 
 **2. CONFIGURING HTTP ENDPOINTS:**
 
