@@ -5,7 +5,7 @@ This document will help you know about Database Monitoring Dashboard and some re
 Continuous Monitoring is a process to monitor and identify compliance issues and security risks throughout each phase of DevOps and IT operations lifecycle. Monitoring the services not only gives you the ability to respond quickly to problems and outages, it can also help to anticipate and prevent errors that may occur in the future which sometimes may lead to system crash or frequent ups and downs in the server. The currently built Service Monitoring Dashboard allows the users to keep an eye and view into the performance & health of an application. It also helps the viewers to quickly detect and resolve any issues. 
 
 # Dependencies used
-**1. GRAFANA**
+###1. GRAFANA
 
 Grafana allows you to query, visualize, alert on and understand your metrics no matter where they are stored. Create, explore, and share dashboards with your team and foster a data driven culture. It enables to visualise fast and flexible client-side graphs with a multitude of options.
 
@@ -41,22 +41,26 @@ Endpoints allow you to monitor and interact with your application. Spring boot a
 
 Grafana and Prometheus, both the packages are installed on Unix Machine. 
 Use the below command to download Grafana,
-
-https://artifactory.global.standardchartered.com/artifactory/generic-release/grafana-artifacts/grafana-6.6.0.linux-amd64.tar.gz
+```sh
+   https://artifactory.global.standardchartered.com/artifactory/generic-release/grafana-artifacts/grafana-6.6.0.linux-amd64.tar.gz
+  ```
 
 Next extract the tar package,
-
 ```sh
    tar –xvzf grafana-6.6.0.linux-amd64.tar.gz
   ```
 
 Move to the Grafana package. Now, to start the service we have to execute the following command:
-
 ```sh
    ./grafana-server
 ```
 
 NOTE: To restart the Grafana Service, kill the PID of Grafana and run the above-mentioned command again.
+
+Command to kill the current PID,
+```sh
+   kill -9 $(lsof -t -i:3000)
+```
 
 Go to https://prometheus.io/download/
 
@@ -65,12 +69,12 @@ Download the following command to any path in your Linux server.
    prometheus-2.28.1.linux-amd64.tar.gz
 ```
 
+Next extract the tar package,
 ```sh
    tar –xvzf  prometheus-2.28.1.linux-amd64.tar.gz
 ```
 
 Move to the Prometheus package. Now, to start the service execute the following command,
-
 ```sh
    ./prometheus
 ```
@@ -78,7 +82,6 @@ Move to the Prometheus package. Now, to start the service execute the following 
 NOTE: To restart the Prometheus Service, kill the PID of Grafana and run the above-mentioned command again.
 
 Command to kill the current PID,
-
 ```sh
    kill -9 $(lsof -t -i:9090)
 ```
