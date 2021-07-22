@@ -14,6 +14,7 @@
      <li><a href="#integrating-prometheus-to-grafana">Integrating Prometheus to Grafana</a></li>
      <li><a href="#querying-data">Querying Data</a></li>
      <li><a href="#building-dashboard">Building Dashboard</a></li>
+     <li><a href="#dashboard-template">Dashboard Template</a></li>
      <li><a href="#summary">Summary</a></li>
      <li><a href="#references">References</a></li>
   </ol>
@@ -215,6 +216,17 @@ The above screenshot contains several features of interest:
 2.	Grafana dashboards can perform and visualize multiple queries simultaneously. This allows you to compare two separate metric values, such as 4xx and 5xx errors.
 Finally, save your changes by clicking the Save icon on the top of the screen.
 In the similar way, we can create many panels and make a dynamic dashboard for monitoring different services.
+
+<!-- DASHBOARD TEMPLATE -->
+# Dashboard Template
+
+![snapshot1](https://user-images.githubusercontent.com/60230072/126598838-4b7b2f9b-bd01-4773-be5e-14db42270f2d.png)
+
+![snapshot2](https://user-images.githubusercontent.com/60230072/126598856-4e7b79d2-66ae-42da-95b8-5d895c4c9023.png)
+
+![snapshot3](https://user-images.githubusercontent.com/60230072/126598866-f26564a3-24b9-44cd-882c-631a70fde107.png)
+
+
 
 <!-- SUMMARY -->
 # Summary
