@@ -221,9 +221,7 @@ In the similar way, we can create many panels and make a dynamic dashboard for m
 # Dashboard Template
 
 ![snapshot1 - Copy](https://user-images.githubusercontent.com/60230072/126598949-a80e5968-467d-4920-965d-a288dedb2c70.png)
-
 ![snapshot2](https://user-images.githubusercontent.com/60230072/126598856-4e7b79d2-66ae-42da-95b8-5d895c4c9023.png)
-
 ![snapshot3](https://user-images.githubusercontent.com/60230072/126598866-f26564a3-24b9-44cd-882c-631a70fde107.png)
 
 
