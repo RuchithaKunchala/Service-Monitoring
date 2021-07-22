@@ -2,7 +2,7 @@
 <details open="open">
   <summary>Table of Contents</summary>
   <ol> 
-     <li><a href="#service-monitoring-dashboard">Service Monitoring Dashboard</a></li>
+     <li><a href="#grafana-dashboard">Grafana Dashboard</a></li>
      <li><a href="#need-for-monitoring">Need for Monitoring?</a></li>
      <li><a href="#dependencies-used">Dependencies Used</a></li>
      <li><a href="#grafana">Grafana</a></li>
@@ -21,7 +21,7 @@
 
 
 <!-- SERVICE MONITORING DASHBOARD -->
-# Service Monitoring Dashboard
+# Grafana Dashboard
 This document will help you know about Database Monitoring Dashboard and some related aspects. The currently illustriated Service Monitoring Dashboard is built to monitor the Time Series Data Base for Applications taken in real time ensuring availabilty and performance.
 
 <!-- NEED FOR MONITORING -->
