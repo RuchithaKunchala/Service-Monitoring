@@ -220,7 +220,7 @@ In the similar way, we can create many panels and make a dynamic dashboard for m
 <!-- DASHBOARD TEMPLATE -->
 # Dashboard Template
 
-![snapshot1](https://user-images.githubusercontent.com/60230072/126598838-4b7b2f9b-bd01-4773-be5e-14db42270f2d.png)
+![snapshot1 - Copy](https://user-images.githubusercontent.com/60230072/126598949-a80e5968-467d-4920-965d-a288dedb2c70.png)
 
 ![snapshot2](https://user-images.githubusercontent.com/60230072/126598856-4e7b79d2-66ae-42da-95b8-5d895c4c9023.png)
 
