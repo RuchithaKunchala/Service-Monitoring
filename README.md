@@ -22,7 +22,7 @@
 
 <!-- SERVICE MONITORING DASHBOARD -->
 # Grafana Dashboard
-This document will help you know about Database Monitoring Dashboard and some related aspects. The currently illustriated Service Monitoring Dashboard is built to monitor the Time Series Data Base for Applications taken in real time ensuring availabilty and performance.
+This document will help you know about Database Monitoring Dashboard and some related aspects. The current illustriation is regarding a Service Monitoring Dashboard which is built to monitor the Time Series Data Base for Applications taken in real time ensuring availabilty and performance.
 
 <!-- NEED FOR MONITORING -->
 # Need for Monitoring?
