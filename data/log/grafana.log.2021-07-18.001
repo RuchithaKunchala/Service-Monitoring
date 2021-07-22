@@ -1,0 +1,19 @@
+t=2021-07-16T19:16:46+0530 lvl=eror msg="Failed to send usage stats" logger=metrics err="Post \"https://stats.grafana.org/grafana-usage-report\": dial tcp: lookup stats.grafana.org: no such host"
+t=2021-07-16T22:25:11+0530 lvl=info msg="Shutdown started" logger=server reason="System signal: terminated"
+t=2021-07-16T22:25:41+0530 lvl=info msg="Starting Grafana" logger=server version=8.0.3 commit=cae5c5e46b branch=HEAD compiled=2021-06-18T14:26:02+0530
+t=2021-07-16T22:25:41+0530 lvl=info msg="Config loaded from" logger=settings file=D:\\NewFolder\\GrafanaLab\\grafana/conf/defaults.ini
+t=2021-07-16T22:25:41+0530 lvl=info msg="Path Home" logger=settings path=D:\\NewFolder\\GrafanaLab\\grafana
+t=2021-07-16T22:25:41+0530 lvl=info msg="Path Data" logger=settings path=D:\\NewFolder\\GrafanaLab\\grafana\\data
+t=2021-07-16T22:25:41+0530 lvl=info msg="Path Logs" logger=settings path=D:\\NewFolder\\GrafanaLab\\grafana\\data\\log
+t=2021-07-16T22:25:41+0530 lvl=info msg="Path Plugins" logger=settings path=D:\\NewFolder\\GrafanaLab\\grafana\\data\\plugins
+t=2021-07-16T22:25:41+0530 lvl=info msg="Path Provisioning" logger=settings path=D:\\NewFolder\\GrafanaLab\\grafana\\conf\\provisioning
+t=2021-07-16T22:25:41+0530 lvl=info msg="App mode production" logger=settings
+t=2021-07-16T22:25:41+0530 lvl=info msg="Connecting to DB" logger=sqlstore dbtype=sqlite3
+t=2021-07-16T22:25:41+0530 lvl=warn msg="SQLite database file has broader permissions than it should" logger=sqlstore path=D:\\NewFolder\\GrafanaLab\\grafana\\data\\grafana.db mode=-rw-rw-rw- expected=-rw-r-----
+t=2021-07-16T22:25:41+0530 lvl=info msg="Starting DB migrations" logger=migrator
+t=2021-07-16T22:25:41+0530 lvl=info msg="migrations completed" logger=migrator performed=0 skipped=330 duration=998.8µs
+t=2021-07-16T22:25:41+0530 lvl=info msg="Starting plugin search" logger=plugins
+t=2021-07-16T22:25:41+0530 lvl=info msg="Registering plugin" logger=plugins id=input
+t=2021-07-16T22:25:41+0530 lvl=info msg="Registering plugin" logger=plugins id=grafana-plugin-admin-app
+t=2021-07-16T22:25:41+0530 lvl=info msg="Live Push Gateway initialization" logger=live.push_http
+t=2021-07-16T22:25:41+0530 lvl=info msg="HTTP Server Listen" logger=http.server address=[::]:3000 protocol=http subUrl= socket=

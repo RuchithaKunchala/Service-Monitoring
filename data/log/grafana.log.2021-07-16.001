@@ -1,0 +1,6 @@
+t=2021-07-15T07:57:47+0530 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/api/live/ws status=0 remote_addr=[::1] time_ms=10 size=0 referer=
+t=2021-07-15T07:57:52+0530 lvl=info msg="Initialized channel handler" logger=live channel=grafana/dashboard/uid/7AsmvIknk address=grafana/dashboard/uid/7AsmvIknk
+t=2021-07-15T09:24:48+0530 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/api/live/ws status=0 remote_addr=[::1] time_ms=9 size=0 referer=
+t=2021-07-15T14:06:50+0530 lvl=eror msg="Failed to send usage stats" logger=metrics err="Post \"https://stats.grafana.org/grafana-usage-report\": dial tcp: lookup stats.grafana.org: no such host"
+t=2021-07-15T17:11:42+0530 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/api/live/ws status=0 remote_addr=[::1] time_ms=11 size=0 referer=
+t=2021-07-15T20:48:06+0530 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/api/live/ws status=0 remote_addr=[::1] time_ms=6 size=0 referer=
